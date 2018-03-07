@@ -16,16 +16,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2018/2 | wedog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wedog">
-<meta property="og:url" content="https://wedog.github.io/archives/2018/02/index.html">
+  <title>CSS知识 | wedog</title>
+  <meta name="description" content="css基础CSS盒模型:每个HTML元素都是长方形盒子。   盒子模型有两种：IE盒子模型、标准W3C盒子模型；IE的content部分包含了border和pading。  标准W3C盒模型包含：内容(content)、填充(padding)、边界(margin)、边框(border)。  CSS选择器，  伪类：id选择器（# myid）   类选择器（.myclassname）  标签选择器（">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS知识">
+<meta property="og:url" content="https://wedog.github.io/2018/01/24/css/index.html">
 <meta property="og:site_name" content="wedog">
+<meta property="og:description" content="css基础CSS盒模型:每个HTML元素都是长方形盒子。   盒子模型有两种：IE盒子模型、标准W3C盒子模型；IE的content部分包含了border和pading。  标准W3C盒模型包含：内容(content)、填充(padding)、边界(margin)、边框(border)。  CSS选择器，  伪类：id选择器（# myid）   类选择器（.myclassname）  标签选择器（">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-07T09:24:57.051Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wedog">
+<meta name="twitter:title" content="CSS知识">
+<meta name="twitter:description" content="css基础CSS盒模型:每个HTML元素都是长方形盒子。   盒子模型有两种：IE盒子模型、标准W3C盒子模型；IE的content部分包含了border和pading。  标准W3C盒模型包含：内容(content)、填充(padding)、边界(margin)、边框(border)。  CSS选择器，  伪类：id选择器（# myid）   类选择器（.myclassname）  标签选择器（">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://wedog.github.io/archives/2018/02/index.html">
+  <link rel="canonical" href="https://wedog.github.io/2018/01/24/css/index.html">
   
     <link rel="alternate" href="/atom.xml" title="wedog" type="application/atom+xml">
   
@@ -344,48 +349,215 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2018/2</h1>
-	      <p class="text-muted">共 1 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-css" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      CSS知识
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/01/24/css/" class="article-date">
+	  <time datetime="2018-01-23T23:07:20.000Z" itemprop="datePublished">2018-01-24</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/css/">css</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/css/">css</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/01/24/css/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h2 id="css基础"><a href="#css基础" class="headerlink" title="css基础"></a>css基础</h2><p><strong>CSS盒模型</strong>:每个HTML元素都是长方形盒子。 </p>
+<ol>
+<li>盒子模型有两种：IE盒子模型、标准W3C盒子模型；IE的content部分包含了border和pading。 </li>
+<li>标准W3C盒模型包含：内容(content)、填充(padding)、边界(margin)、边框(border)。</li>
+</ol>
+<p><strong>CSS选择器</strong>，</p>
+<ol>
+<li><p>伪类：id选择器（# myid） </p>
+</li>
+<li><p>类选择器（.myclassname）</p>
+</li>
+<li><p>标签选择器（div、h1、p） </p>
+</li>
+<li><p>相邻选择器（h1 + p） </p>
+</li>
+<li><p>子选择器（ul &lt; li） </p>
+</li>
+<li><p>后代选择器（li a）</p>
+</li>
+<li><p>通配符选择器（ * ） </p>
+</li>
+<li><p>属性选择器（a[rel = “external”]） </p>
+</li>
+<li><p>伪类选择器（a: hover, li: nth - child）</p>
+</li>
+</ol>
+<p><strong>优先级就近原则</strong>，样式定义最近者为准，载入样式以最后载入的定位为准。</p>
+<p> <strong>优先级为：</strong> !important &gt; id &gt; class &gt; tag </p>
+<p><strong>CSS3新增伪类举例：</strong> </p>
+<ol>
+<li>p:first-of-type 选择属于其父元素的首个<p>元素的每个</p><p>元素。 </p></li>
+<li>p:last-of-type 选择属于其父元素的最后<p>元素的每个</p><p>元素。</p></li>
+<li>p:only-of-type 选择属于其父元素唯一的<p>元素的每个</p><p>元素。 </p></li>
+<li>p:only-child 选择属于其父元素的唯一子元素的每个<p>元素。 </p></li>
+<li>p:nth-child(2) 选择属于其父元素的第二个子元素的每个<p>元素。 </p></li>
+<li>:enabled、:disabled 控制表单控件的禁用状态。 </li>
+<li>:checked 单选框或复选框被选中。</li>
+</ol>
+<p><strong>可继承</strong>： font-size font-family color, UL LI DL DD DT; </p>
+<p><strong>不可继承</strong> ：border padding margin width height ; </p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://wedog.github.io/2018/01/24/css/" title="CSS知识" target="_blank" rel="external">https://wedog.github.io/2018/01/24/css/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/wedog" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/wedog" target="_blank"><span class="text-dark">wedog</span><small class="ml-1x">Web Developer</small></a></h3>
+        <div>Web front-end development。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+       
+    <div id="uyan_frame"></div>
+
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2018" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2018
-            </a>
-            <!-- <a href="/archives/2018" class="archive-year">2018</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/01/24/ECMAScript6-20180124/" title="ECMAScript6知识点"><i class="icon icon-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2018/01/09/observer/" title="观察者模式">下一篇&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
+            </div>
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
         </div>
-        <div id="collapse2018" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2018">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2018/02/21/github_20180221/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2018-02-21T09:20:57.000Z" itemprop="datePublished">2018-02-21</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 更新github上fork项目的变更
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-  
-    </div></div></div></section>
-  
 
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -442,6 +614,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
     
+    
+        
+    
+    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+
+
     
     
 
