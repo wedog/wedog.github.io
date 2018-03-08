@@ -16,17 +16,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签 | wedog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="https://wedog.github.io/tags/index.html">
+  <title>express 源码解读 | wedog</title>
+  <meta name="description" content="express 源码解读项目地址clutter 前言入门node.js的api，用了几年koa，感觉自身能力总是停留在api表面。对node.js的内涵，框架底层的实现原理一窍不通。最近狠下决心，花了一个月的时间将express的源码仔细阅读。试着用ES6的语法将其主要代码改写，其中很多工具方法多为拷贝，待仔细品尝。 结构 express主入口文件App.js  express路由Router.j">
+<meta name="keywords" content="express">
+<meta property="og:type" content="article">
+<meta property="og:title" content="express 源码解读">
+<meta property="og:url" content="https://wedog.github.io/2018/02/25/clutter/index.html">
 <meta property="og:site_name" content="wedog">
+<meta property="og:description" content="express 源码解读项目地址clutter 前言入门node.js的api，用了几年koa，感觉自身能力总是停留在api表面。对node.js的内涵，框架底层的实现原理一窍不通。最近狠下决心，花了一个月的时间将express的源码仔细阅读。试着用ES6的语法将其主要代码改写，其中很多工具方法多为拷贝，待仔细品尝。 结构 express主入口文件App.js  express路由Router.j">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-06T07:38:14.993Z">
+<meta property="og:updated_time" content="2018-03-08T09:20:13.828Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
+<meta name="twitter:title" content="express 源码解读">
+<meta name="twitter:description" content="express 源码解读项目地址clutter 前言入门node.js的api，用了几年koa，感觉自身能力总是停留在api表面。对node.js的内涵，框架底层的实现原理一窍不通。最近狠下决心，花了一个月的时间将express的源码仔细阅读。试着用ES6的语法将其主要代码改写，其中很多工具方法多为拷贝，待仔细品尝。 结构 express主入口文件App.js  express路由Router.j">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://wedog.github.io/tags/index.html">
+  <link rel="canonical" href="https://wedog.github.io/2018/02/25/clutter/index.html">
   
     <link rel="alternate" href="/atom.xml" title="wedog" type="application/atom+xml">
   
@@ -343,353 +347,189 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签</h1>
-      <p class="text-muted hidden-xs">共 10 个标签</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/express/">express</a></li>
-          
-          <li><a href="/tags/github-fork/">github_fork</a></li>
-          
-          <li><a href="/tags/javascript-ECMAScript6/">javascript_ECMAScript6</a></li>
-          
-          <li><a href="/tags/css/">css</a></li>
-          
-          <li><a href="/tags/interview/">interview</a></li>
-          
-          <li><a href="/tags/new/">new</a></li>
-          
-          <li><a href="/tags/mongo-mongodb-replica-set/">mongo_mongodb_replica_set</a></li>
-          
-          <li><a href="/tags/javascript-clone/">javascript_clone</a></li>
-          
-          <li><a href="/tags/javascript-observer-mode/">javascript_observer_mode</a></li>
-          
-          <li><a href="/tags/javascript-single-mode/">javascript_single_mode</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-clutter" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
       
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/express/" title="#express"># express</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
         
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-02-25T09:07:20.000Z" itemprop="datePublished">2018-02-25</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/02/25/clutter/">express 源码解读</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/express/" class="label label-default mb">express</a>
-     
-   </div>
-   
-</article>
+  
+    <h1 class="article-title" itemprop="name">
+      express 源码解读
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/02/25/clutter/" class="article-date">
+	  <time datetime="2018-02-25T09:07:20.000Z" itemprop="datePublished">2018-02-25</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/node-js/">node.js</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/express/">express</a>
+  </span>
 
 
-        </div>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/02/25/clutter/#comments" class="article-comment-link">评论</a></span>
         
       </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
       
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/github-fork/" title="#github_fork"># github_fork</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-02-21T09:20:57.000Z" itemprop="datePublished">2018-02-21</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/02/21/github_20180221/">更新github上fork项目的变更</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/github-fork/" class="label label-default mb">github_fork</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/javascript-ECMAScript6/" title="#javascript_ECMAScript6"># javascript_ECMAScript6</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-01-23T23:07:20.000Z" itemprop="datePublished">2018-01-24</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/01/24/ECMAScript6-20180124/">ECMAScript6知识点</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/javascript-ECMAScript6/" class="label label-default mb">javascript_ECMAScript6</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/css/" title="#css"># css</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-01-23T23:07:20.000Z" itemprop="datePublished">2018-01-24</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/01/24/css/">CSS知识</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/css/" class="label label-default mb">css</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/interview/" title="#interview"># interview</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-03-06T09:10:56.000Z" itemprop="datePublished">2018-03-06</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/03/06/interview/">面试时，如何向公司提问？</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/interview/" class="label label-default mb">interview</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/new/" title="#new"># new</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-03-06T09:07:20.000Z" itemprop="datePublished">2018-03-06</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/03/06/new/">javascript的 new 运算符</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/new/" class="label label-default mb">new</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/mongo-mongodb-replica-set/" title="#mongo_mongodb_replica_set"># mongo_mongodb_replica_set</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2017-06-21T09:20:57.000Z" itemprop="datePublished">2017-06-21</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2017/06/21/mongo_20170621/">mongodb replica set 实战</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/mongo-mongodb-replica-set/" class="label label-default mb">mongo_mongodb_replica_set</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/javascript-clone/" title="#javascript_clone"># javascript_clone</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-01-07T23:07:20.000Z" itemprop="datePublished">2018-01-08</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/01/08/clone/">深拷贝</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/javascript-clone/" class="label label-default mb">javascript_clone</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/javascript-observer-mode/" title="#javascript_observer_mode"># javascript_observer_mode</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-01-08T23:07:20.000Z" itemprop="datePublished">2018-01-09</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/01/09/observer/">观察者模式</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/javascript-observer-mode/" class="label label-default mb">javascript_observer_mode</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
-        <a href="/tags/javascript-single-mode/" title="#javascript_single_mode"># javascript_single_mode</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-01-08T23:07:20.000Z" itemprop="datePublished">2018-01-09</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/01/09/single_instance/">单例模式</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/javascript-single-mode/" class="label label-default mb">javascript_single_mode</a>
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
+        <h2 id="express-源码解读"><a href="#express-源码解读" class="headerlink" title="express 源码解读"></a>express 源码解读</h2><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p><a href="https://github.com/wedog/clutter" target="_blank" rel="noopener">clutter</a></p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>入门node.js的api，用了几年koa，感觉自身能力总是停留在api表面。对node.js的内涵，框架底层的实现原理一窍不通。<br>最近狠下决心，花了一个月的时间将express的源码仔细阅读。试着用ES6的语法将其主要代码改写，其中很多工具方法多<br>为拷贝，待仔细品尝。</p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><ul>
+<li><p>express主入口文件App.js</p>
+</li>
+<li><p>express路由Router.js</p>
+</li>
+<li><p>express默认中间件</p>
+</li>
+<li><p>工具类，url解析、http协议头设置等</p>
+</li>
+</ul>
+<h3 id="App-js"><a href="#App-js" class="headerlink" title="App.js"></a>App.js</h3>
       
     </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://wedog.github.io/2018/02/25/clutter/" title="express 源码解读" target="_blank" rel="external">https://wedog.github.io/2018/02/25/clutter/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/wedog" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/wedog" target="_blank"><span class="text-dark">wedog</span><small class="ml-1x">Web Developer</small></a></h3>
+        <div>Web front-end development。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
+  
+    
+  <section id="comments">
+  	
+       
+    <div id="uyan_frame"></div>
+
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/03/06/new/" title="javascript的 new 运算符"><i class="icon icon-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2018/02/21/github_20180221/" title="更新github上fork项目的变更">下一篇&nbsp;&nbsp;<i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
+            </div>
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
+            </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -746,6 +586,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
     
+    
+        
+    
+    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+
+
     
     
 
